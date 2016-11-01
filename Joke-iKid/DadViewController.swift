@@ -12,14 +12,7 @@ class DadViewController: UIViewController {
 
     @IBOutlet weak var jokeLabel: UILabel!
     @IBAction func generateButton(_ sender: UIButton) {
-        
-        UIView.beginAnimations("View Flip", context: nil)
-        UIView.setAnimationDuration(0.4)
-        UIView.setAnimationCurve(.easeInOut)
-        UIView.setAnimationRepeatCount(4)
-        UIView.setAnimationTransition(.flipFromRight, for: view, cache: true)
-        UIView.commitAnimations()
-        
+        flipping()
     }
     @IBAction func answerButton(_ sender: UIButton) {
     }
@@ -34,6 +27,14 @@ class DadViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func flipping() {
+        UIView.beginAnimations("View Flip", context: nil)
+        UIView.setAnimationDuration(0.4)
+        UIView.setAnimationCurve(.easeInOut)
+        UIView.setAnimationRepeatCount(4)
+        UIView.setAnimationTransition(.flipFromRight, for: view, cache: true)
+        UIView.commitAnimations()
+    }
 
     /*
     // MARK: - Navigation
