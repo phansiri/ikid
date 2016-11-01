@@ -16,6 +16,8 @@
 		0C220F111DC94B3B00067175 /* Joke_iKidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C220F101DC94B3B00067175 /* Joke_iKidTests.swift */; };
 		0C220F1C1DC94B3B00067175 /* Joke_iKidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C220F1B1DC94B3B00067175 /* Joke_iKidUITests.swift */; };
 		0C220F2A1DC94DB900067175 /* DadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C220F291DC94DB900067175 /* DadViewController.swift */; };
+		0C220F2C1DC94E2F00067175 /* GoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C220F2B1DC94E2F00067175 /* GoodViewController.swift */; };
+		0C220F2E1DC94E3900067175 /* PunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C220F2D1DC94E3900067175 /* PunViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		0C220F1B1DC94B3B00067175 /* Joke_iKidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke_iKidUITests.swift; sourceTree = "<group>"; };
 		0C220F1D1DC94B3B00067175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C220F291DC94DB900067175 /* DadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DadViewController.swift; sourceTree = "<group>"; };
+		0C220F2B1DC94E2F00067175 /* GoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodViewController.swift; sourceTree = "<group>"; };
+		0C220F2D1DC94E3900067175 /* PunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PunViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				0C220F041DC94B3B00067175 /* LaunchScreen.storyboard */,
 				0C220F071DC94B3B00067175 /* Info.plist */,
 				0C220F291DC94DB900067175 /* DadViewController.swift */,
+				0C220F2B1DC94E2F00067175 /* GoodViewController.swift */,
+				0C220F2D1DC94E3900067175 /* PunViewController.swift */,
 			);
 			path = "Joke-iKid";
 			sourceTree = "<group>";
@@ -268,9 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C220F2C1DC94E2F00067175 /* GoodViewController.swift in Sources */,
 				0C220EFE1DC94B3B00067175 /* SecondViewController.swift in Sources */,
 				0C220EFA1DC94B3B00067175 /* AppDelegate.swift in Sources */,
 				0C220F2A1DC94DB900067175 /* DadViewController.swift in Sources */,
+				0C220F2E1DC94E3900067175 /* PunViewController.swift in Sources */,
 				0C220EFC1DC94B3B00067175 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

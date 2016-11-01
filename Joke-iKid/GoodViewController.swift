@@ -1,5 +1,5 @@
 //
-//  DadViewController.swift
+//  GoodViewController.swift
 //  Joke-iKid
 //
 //  Created by Litthideth Phansiri on 11/1/16.
@@ -8,24 +8,16 @@
 
 import UIKit
 
-class DadViewController: UIViewController {
+class GoodViewController: UIViewController {
 
     @IBOutlet weak var jokeLabel: UILabel!
     @IBAction func generateButton(_ sender: UIButton) {
-        
-        UIView.beginAnimations("View Flip", context: nil)
-        UIView.setAnimationDuration(0.4)
-        UIView.setAnimationCurve(.easeInOut)
-        UIView.setAnimationRepeatCount(4)
-        UIView.setAnimationTransition(.flipFromRight, for: view, cache: true)
-        UIView.commitAnimations()
-        
     }
     @IBAction func answerButton(_ sender: UIButton) {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
