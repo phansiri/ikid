@@ -23,6 +23,8 @@
 		0C2DFF851DCAE2FC0026CD4E /* GoodFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DFF841DCAE2FC0026CD4E /* GoodFourViewController.swift */; };
 		0C2DFF871DCAE3080026CD4E /* GoodFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DFF861DCAE3080026CD4E /* GoodFiveViewController.swift */; };
 		0C2DFF891DCAEDDA0026CD4E /* GoodOriginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DFF881DCAEDDA0026CD4E /* GoodOriginViewController.swift */; };
+		0C2DFF8B1DCAF4010026CD4E /* PunFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DFF8A1DCAF4010026CD4E /* PunFirstViewController.swift */; };
+		0C2DFF8D1DCAF4090026CD4E /* PunSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DFF8C1DCAF4090026CD4E /* PunSecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		0C2DFF841DCAE2FC0026CD4E /* GoodFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodFourViewController.swift; sourceTree = "<group>"; };
 		0C2DFF861DCAE3080026CD4E /* GoodFiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodFiveViewController.swift; sourceTree = "<group>"; };
 		0C2DFF881DCAEDDA0026CD4E /* GoodOriginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodOriginViewController.swift; sourceTree = "<group>"; };
+		0C2DFF8A1DCAF4010026CD4E /* PunFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PunFirstViewController.swift; sourceTree = "<group>"; };
+		0C2DFF8C1DCAF4090026CD4E /* PunSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PunSecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				0C2DFF841DCAE2FC0026CD4E /* GoodFourViewController.swift */,
 				0C2DFF861DCAE3080026CD4E /* GoodFiveViewController.swift */,
 				0C220F2D1DC94E3900067175 /* PunViewController.swift */,
+				0C2DFF8C1DCAF4090026CD4E /* PunSecondViewController.swift */,
+				0C2DFF8A1DCAF4010026CD4E /* PunFirstViewController.swift */,
 			);
 			path = "Joke-iKid";
 			sourceTree = "<group>";
@@ -290,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C2DFF851DCAE2FC0026CD4E /* GoodFourViewController.swift in Sources */,
+				0C2DFF8D1DCAF4090026CD4E /* PunSecondViewController.swift in Sources */,
+				0C2DFF8B1DCAF4010026CD4E /* PunFirstViewController.swift in Sources */,
 				0C2DFF831DCAE2ED0026CD4E /* GoodThreeViewController.swift in Sources */,
 				0C2DFF7D1DCAD89D0026CD4E /* DadTwoViewController.swift in Sources */,
 				0C220F2C1DC94E2F00067175 /* GoodViewController.swift in Sources */,

@@ -9,16 +9,58 @@
 import UIKit
 
 class PunViewController: UIViewController {
+    private var punFirstViewController: PunFirstViewController!
+    private var punSecondViewController: PunSecondViewController!
+    
+    private func firstBuilder() {
+        if punFirstViewController == nil {
+            punFirstViewController = storyboard?.instantiateViewController(withIdentifier: "PunFirst") as! PunFirstViewController
+        }
+    }
+    
+    private func secondBuilder() {
+        if punSecondViewController == nil {
+            punSecondViewController = storyboard?.instantiateViewController(withIdentifier: "PunSecond") as! PunSecondViewController
+        }
+    }
+    
+    @IBAction func nextButton(_ sender: UIButton) {
+        firstBuilder(); secondBuilder()
+        
+        UIView.beginAnimations("View Flip", context: nil)
+        UIView.setAnimationDuration(0.4)
+        UIView.setAnimationCurve(.easeInOut)
+        
+        if punFirstViewController != nil && punFirstViewController.view.superview != nil {
+            UIView.setAnimationTransition(.flipFromLeft, for: view, cache: true)
+            punSecondViewController.view.frame = view.frame
+            switchViewController(from: punFirstViewController, to: punSecondViewController)
+        } else {
+            UIView.setAnimationTransition(.flipFromRight, for: view, cache: true)
+            punFirstViewController.view.frame = view.frame
+            switchViewController(from: punSecondViewController, to: punFirstViewController)
+        }
+        UIView.commitAnimations()
+    }
+    
+    private func switchViewController(from: UIViewController?, to: UIViewController?) {
+        if from != nil {
+            from!.willMove(toParentViewController: nil)
+            from!.view.removeFromSuperview()
+            from!.removeFromParentViewController()
+        }
+        
+        if to != nil {
+            self.addChildViewController(to!)
+            self.view.insertSubview(to!.view, at: 0)
+            to!.didMove(toParentViewController: self)
+        }
+    }
 
-    @IBOutlet weak var jokeLabel: UILabel!
-    @IBAction func generateButton(_ sender: UIButton) {
-        flipping()
-    }
-    @IBAction func answerButton(_ sender: UIButton) {
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        firstBuilder()
+        switchViewController(from: nil, to: punFirstViewController)
         // Do any additional setup after loading the view.
     }
 
@@ -26,15 +68,7 @@ class PunViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    private func flipping() {
-        UIView.beginAnimations("View Flip", context: nil)
-        UIView.setAnimationDuration(0.4)
-        UIView.setAnimationCurve(.easeInOut)
-        UIView.setAnimationRepeatCount(4)
-        UIView.setAnimationTransition(.flipFromRight, for: view, cache: true)
-        UIView.commitAnimations()
-    }
+
     /*
     // MARK: - Navigation
 
