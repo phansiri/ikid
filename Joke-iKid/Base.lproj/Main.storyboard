@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kd-z9-U3e">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kd-z9-U3e">
                                 <rect key="frame" x="16" y="481" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.27603780845567416" green="0.99253946723834996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
@@ -31,6 +31,11 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="2Kd-z9-U3e" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="LLt-LX-nKk"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="2Kd-z9-U3e" secondAttribute="bottom" constant="8" symbolic="YES" id="ekl-xl-2fa"/>
+                            <constraint firstItem="2Kd-z9-U3e" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="iTU-Bu-x3v"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Good" image="first" id="acW-dT-cKf"/>
                 </viewController>
@@ -50,15 +55,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Knock Knock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90J-Sf-Din">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knock Knock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90J-Sf-Din">
                                 <rect key="frame" x="16" y="28" width="288" height="520"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="90J-Sf-Din" firstAttribute="top" secondItem="0aY-wY-3i6" secondAttribute="bottom" constant="8" symbolic="YES" id="Gfx-Xg-vr9"/>
+                            <constraint firstItem="90J-Sf-Din" firstAttribute="trailing" secondItem="m8F-KT-ybe" secondAttribute="trailingMargin" id="XTa-23-vJv"/>
+                            <constraint firstItem="90J-Sf-Din" firstAttribute="leading" secondItem="m8F-KT-ybe" secondAttribute="leadingMargin" id="kRX-ZW-7FQ"/>
+                            <constraint firstAttribute="bottom" secondItem="90J-Sf-Din" secondAttribute="bottom" constant="20" symbolic="YES" id="krZ-9c-ikR"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cd1-1V-xHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -77,15 +87,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who's there" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZz-x5-X5V">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who's there" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZz-x5-X5V">
                                 <rect key="frame" x="16" y="28" width="288" height="520"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZZz-x5-X5V" firstAttribute="leading" secondItem="Gpr-Xj-TvQ" secondAttribute="leadingMargin" id="3pH-Uh-YPt"/>
+                            <constraint firstItem="ZZz-x5-X5V" firstAttribute="top" secondItem="6ho-ZS-Mlk" secondAttribute="bottom" constant="8" symbolic="YES" id="9eQ-MS-gHU"/>
+                            <constraint firstAttribute="bottom" secondItem="ZZz-x5-X5V" secondAttribute="bottom" constant="20" symbolic="YES" id="VvX-91-z7l"/>
+                            <constraint firstItem="ZZz-x5-X5V" firstAttribute="trailing" secondItem="Gpr-Xj-TvQ" secondAttribute="trailingMargin" id="eZd-v6-mmg"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xkn-JD-8Rv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,15 +119,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cows go" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMd-jb-svK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cows go" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMd-jb-svK">
                                 <rect key="frame" x="16" y="20" width="288" height="528"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dMd-jb-svK" firstAttribute="trailing" secondItem="vox-0h-Prs" secondAttribute="trailingMargin" id="BmC-Sa-a5G"/>
+                            <constraint firstAttribute="bottom" secondItem="dMd-jb-svK" secondAttribute="bottom" constant="20" symbolic="YES" id="E0X-Rf-Sej"/>
+                            <constraint firstItem="dMd-jb-svK" firstAttribute="leading" secondItem="vox-0h-Prs" secondAttribute="leadingMargin" id="gNe-xQ-qEs"/>
+                            <constraint firstItem="dMd-jb-svK" firstAttribute="top" secondItem="94a-No-7Sq" secondAttribute="bottom" id="tbd-H2-gdo"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gk0-5V-8cI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -131,15 +151,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cows go, who!?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEg-3c-3Rq">
-                                <rect key="frame" x="16" y="20" width="288" height="528"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cows go, who!?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEg-3c-3Rq">
+                                <rect key="frame" x="16" y="20" width="280" height="528"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="TEg-3c-3Rq" secondAttribute="bottom" constant="20" symbolic="YES" id="I0E-1l-7Lr"/>
+                            <constraint firstItem="TEg-3c-3Rq" firstAttribute="leading" secondItem="rib-7V-0Zm" secondAttribute="leadingMargin" id="qw5-9E-10w"/>
+                            <constraint firstItem="TEg-3c-3Rq" firstAttribute="top" secondItem="3rb-Cy-I3J" secondAttribute="bottom" id="rbz-at-PJz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TEg-3c-3Rq" secondAttribute="trailing" constant="8" id="wzb-gA-fI7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THa-AQ-gNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -158,12 +183,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cowsgo" highlightedImage="cowsgo" translatesAutoresizingMaskIntoConstraints="NO" id="6cq-GE-mfc">
-                                <rect key="frame" x="16" y="142" width="288" height="285"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cowsgo" highlightedImage="cowsgo" translatesAutoresizingMaskIntoConstraints="NO" id="6cq-GE-mfc">
+                                <rect key="frame" x="16" y="140" width="288" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="9Yy-og-Sik">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="225"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="288" id="Dv3-vR-TOh">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="225"/>
+                                    </constraint>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6cq-GE-mfc" firstAttribute="top" secondItem="cvk-hi-1KH" secondAttribute="bottom" constant="120" id="PPL-FD-6nn">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="6cq-GE-mfc" firstAttribute="leading" secondItem="GIc-Vw-g3m" secondAttribute="leadingMargin" id="ufk-wA-5fT">
+                                <variation key="heightClass=compact-widthClass=compact" constant="154"/>
+                            </constraint>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjf-OB-bH7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,9 +222,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gz-L3-kOs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gz-L3-kOs">
                                 <rect key="frame" x="16" y="481" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.27603780849999998" green="0.99253946719999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
@@ -193,6 +232,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="9Gz-L3-kOs" secondAttribute="bottom" constant="8" symbolic="YES" id="4cf-pr-Cy8"/>
+                            <constraint firstItem="9Gz-L3-kOs" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="UmO-7T-maw"/>
+                            <constraint firstItem="9Gz-L3-kOs" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="teG-o5-2AZ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pun" image="second" id="cPa-gy-q4n"/>
                 </viewController>
@@ -266,9 +310,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PL-0X-ie9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PL-0X-ie9">
                                 <rect key="frame" x="16" y="481" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.27603780849999998" green="0.99253946719999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
@@ -277,6 +320,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5PL-0X-ie9" firstAttribute="leading" secondItem="GP4-A3-7Oq" secondAttribute="leadingMargin" id="E02-mU-qpq"/>
+                            <constraint firstItem="5PL-0X-ie9" firstAttribute="trailing" secondItem="GP4-A3-7Oq" secondAttribute="trailingMargin" id="ZkL-wu-7gg"/>
+                            <constraint firstItem="NgT-aQ-NjF" firstAttribute="top" secondItem="5PL-0X-ie9" secondAttribute="bottom" constant="8" symbolic="YES" id="fzs-wU-Ajd"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dad" image="first" id="93f-6Y-fNr"/>
                 </viewController>
