@@ -9,15 +9,15 @@
 import UIKit
 
 class GoodViewController: UIViewController {
-    private var goodViewController: GoodViewController!
+    private var goodViewController: GoodOriginViewController!
     private var goodTwoViewController: GoodTwoViewController!
     private var goodThreeViewController: GoodThreeViewController!
     private var goodFourViewController: GoodFourViewController!
     private var goodFiveViewController: GoodFiveViewController!
-    
+        
     private func firstBuilder() {
         if goodViewController == nil {
-            goodViewController = storyboard?.instantiateViewController(withIdentifier: "GoodFirst")as! GoodViewController
+            goodViewController = storyboard?.instantiateViewController(withIdentifier: "GoodFirst")as! GoodOriginViewController
         }
     }
     private func secondBuilder() {
@@ -41,28 +41,61 @@ class GoodViewController: UIViewController {
         }
     }
 
-    @IBAction func generateButton(_ sender: UIButton) {
-        flipping()
+    @IBAction func nextButton(_ sender: UIButton) {
+        firstBuilder(); secondBuilder(); threeBuilder(); fourBuilder(); fiveBuilder();
+        
+        UIView.beginAnimations("View Flip", context: nil)
+        UIView.setAnimationDuration(0.4)
+        UIView.setAnimationCurve(.easeInOut)
+        
+        if goodViewController != nil && goodViewController.view.superview != nil {
+            UIView.setAnimationTransition(.flipFromRight, for: view, cache: true)
+            goodTwoViewController.view.frame = view.frame
+            switchViewController(from: goodViewController, to: goodTwoViewController)
+        } else if goodTwoViewController != nil && goodTwoViewController.view.superview != nil {
+            UIView.setAnimationTransition(.flipFromRight, for: view, cache: true)
+            goodThreeViewController.view.frame = view.frame
+            switchViewController(from: goodTwoViewController, to: goodThreeViewController)
+        } else if goodThreeViewController != nil && goodThreeViewController.view.superview != nil {
+            UIView.setAnimationTransition(.flipFromRight, for: view, cache: true)
+            goodFourViewController.view.frame = view.frame
+            switchViewController(from: goodThreeViewController, to: goodFourViewController)
+        } else if goodFourViewController != nil && goodFourViewController.view.superview != nil {
+            UIView.setAnimationTransition(.flipFromRight, for: view, cache: true)
+            goodFourViewController.view.frame = view.frame
+            switchViewController(from: goodFourViewController, to: goodFiveViewController)
+        } else {
+            UIView.setAnimationTransition(.flipFromRight, for: view, cache: true)
+            goodFourViewController.view.frame = view.frame
+            switchViewController(from: goodFiveViewController, to: goodViewController)
+        }
+        UIView.commitAnimations()
     }
-
+    
+    private func switchViewController(from: UIViewController?, to: UIViewController?) {
+        if from != nil {
+            from!.willMove(toParentViewController: nil)
+            from!.view.removeFromSuperview()
+            from!.removeFromParentViewController()
+        }
+        
+        if to != nil {
+            self.addChildViewController(to!)
+            self.view.insertSubview(to!.view, at: 0)
+            to!.didMove(toParentViewController: self)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         firstBuilder()
+        switchViewController(from: nil, to: goodViewController)
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    private func flipping() {
-        UIView.beginAnimations("View Flip", context: nil)
-        UIView.setAnimationDuration(0.4)
-        UIView.setAnimationCurve(.easeInOut)
-        UIView.setAnimationRepeatCount(4)
-        UIView.setAnimationTransition(.flipFromRight, for: view, cache: true)
-        UIView.commitAnimations()
     }
     
     /*
