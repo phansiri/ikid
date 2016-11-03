@@ -22,6 +22,7 @@
 		0C2DFF831DCAE2ED0026CD4E /* GoodThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DFF821DCAE2ED0026CD4E /* GoodThreeViewController.swift */; };
 		0C2DFF851DCAE2FC0026CD4E /* GoodFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DFF841DCAE2FC0026CD4E /* GoodFourViewController.swift */; };
 		0C2DFF871DCAE3080026CD4E /* GoodFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DFF861DCAE3080026CD4E /* GoodFiveViewController.swift */; };
+		0C2DFF891DCAEDDA0026CD4E /* GoodOriginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DFF881DCAEDDA0026CD4E /* GoodOriginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		0C2DFF821DCAE2ED0026CD4E /* GoodThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodThreeViewController.swift; sourceTree = "<group>"; };
 		0C2DFF841DCAE2FC0026CD4E /* GoodFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodFourViewController.swift; sourceTree = "<group>"; };
 		0C2DFF861DCAE3080026CD4E /* GoodFiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodFiveViewController.swift; sourceTree = "<group>"; };
+		0C2DFF881DCAEDDA0026CD4E /* GoodOriginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodOriginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				0C2DFF7C1DCAD89D0026CD4E /* DadTwoViewController.swift */,
 				0C2DFF7E1DCAD8A90026CD4E /* DadThreeViewController.swift */,
 				0C220F2B1DC94E2F00067175 /* GoodViewController.swift */,
+				0C2DFF881DCAEDDA0026CD4E /* GoodOriginViewController.swift */,
 				0C2DFF801DCAE2E40026CD4E /* GoodTwoViewController.swift */,
 				0C2DFF821DCAE2ED0026CD4E /* GoodThreeViewController.swift */,
 				0C2DFF841DCAE2FC0026CD4E /* GoodFourViewController.swift */,
@@ -291,6 +294,7 @@
 				0C2DFF7D1DCAD89D0026CD4E /* DadTwoViewController.swift in Sources */,
 				0C220F2C1DC94E2F00067175 /* GoodViewController.swift in Sources */,
 				0C2DFF811DCAE2E40026CD4E /* GoodTwoViewController.swift in Sources */,
+				0C2DFF891DCAEDDA0026CD4E /* GoodOriginViewController.swift in Sources */,
 				0C220EFA1DC94B3B00067175 /* AppDelegate.swift in Sources */,
 				0C2DFF7F1DCAD8A90026CD4E /* DadThreeViewController.swift in Sources */,
 				0C2DFF871DCAE3080026CD4E /* GoodFiveViewController.swift in Sources */,
