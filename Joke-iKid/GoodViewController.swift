@@ -9,16 +9,45 @@
 import UIKit
 
 class GoodViewController: UIViewController {
+    private var goodViewController: GoodViewController!
+    private var goodTwoViewController: GoodTwoViewController!
+    private var goodThreeViewController: GoodThreeViewController!
+    private var goodFourViewController: GoodFourViewController!
+    private var goodFiveViewController: GoodFiveViewController!
+    
+    private func firstBuilder() {
+        if goodViewController == nil {
+            goodViewController = storyboard?.instantiateViewController(withIdentifier: "GoodFirst")as! GoodViewController
+        }
+    }
+    private func secondBuilder() {
+        if goodTwoViewController == nil {
+            goodTwoViewController = storyboard?.instantiateViewController(withIdentifier: "GoodSecond") as! GoodTwoViewController
+        }
+    }
+    private func threeBuilder() {
+        if goodThreeViewController == nil {
+            goodThreeViewController = storyboard?.instantiateViewController(withIdentifier: "GoodThree")as! GoodThreeViewController
+        }
+    }
+    private func fourBuilder() {
+        if goodFourViewController == nil {
+            goodFourViewController = storyboard?.instantiateViewController(withIdentifier: "GoodFour") as! GoodFourViewController
+        }
+    }
+    private func fiveBuilder() {
+        if goodFiveViewController == nil {
+            goodFiveViewController = storyboard?.instantiateViewController(withIdentifier: "GoodFive") as! GoodFiveViewController
+        }
+    }
 
-    @IBOutlet weak var jokeLabel: UILabel!
     @IBAction func generateButton(_ sender: UIButton) {
         flipping()
     }
-    @IBAction func answerButton(_ sender: UIButton) {
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        firstBuilder()
         // Do any additional setup after loading the view.
     }
 
